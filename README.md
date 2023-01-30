@@ -8,8 +8,11 @@ Factory Method lets a class defer instantiation to sub classes.
 is an abstract class that is used as a base class for all the specific alert dialogs:
 
 getTitle() : an abstract method that returns the title of the alert dialog. Used in the UI;
+
 create() : an abstract method that returns the specific implementation (UI component/widget) of the alert dialog;
+
 show() : calls the create() method to build (create) the alert dialog and show it in the UI.
+
 AndroidAlertDialog and IosAlertDialog are concrete classes that extend the CustomDialog class and implement its abstract methods. AndroidAlertDialog creates a Material style alert dialog of type AlertDialog while the IosAlertDialog creates a Cupertino style alert dialog of type CupertinoAlertDialog.
 
 Widget, CupertinoAlertDialog and AlertDialog are the already implemented classes (widgets) of the Flutter library.
